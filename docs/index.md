@@ -1,6 +1,5 @@
 ---
 layout: default
-title: "Quickstart for ownCloud"
 ---
 # Quickstart for ownCloud
 
