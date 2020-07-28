@@ -28,7 +28,7 @@ twitter_username: josephlouthan
 github_username:  joelouthan
 
 # Build settings
-theme: jekyll-theme-dinky
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
