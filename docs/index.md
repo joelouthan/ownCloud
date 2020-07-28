@@ -1,7 +1,8 @@
 ---
 layout: default
+title: "Quickstart for ownCloud"
+toc: true
 ---
-# Quickstart for ownCloud
 
 ## Introduction
 
