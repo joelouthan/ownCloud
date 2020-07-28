@@ -1,8 +1,10 @@
 ---
 layout: default
 title: "Quickstart for ownCloud"
-toc: true
 ---
+
+1. 
+{:toc}
 
 ## Introduction
 
