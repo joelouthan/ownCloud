@@ -1,2 +1,3 @@
 # ownCloud
-Testing ownCloud Server
+
+Testing personal ownCloud server
