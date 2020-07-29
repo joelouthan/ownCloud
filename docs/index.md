@@ -3,20 +3,23 @@ layout: default
 title: "Quick Start for ownCloud Server"
 ---
 
-- 
-{:toc}
-
 # Introduction
+{:.no_toc}
 
-This is a quick start installation guide for a ownCloud Single Server / Single Database setup.
+This is a quick start installation guide for ownCloud Server on a single server and single database setup.
 
 Additional installation options are covered with the [ownCloud Administration Guide](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html).
 
 For mid-sized and enterprise scaling and high availability options, see [Deployment Considerations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_considerations.html) and [Deployment Recommendations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html).
 
+Let's get started.
+
+- 
+{:toc}
+
 # System Requirements
 
-## Officially Recommended Environment
+## Official Recommended Environment
 
 We officially recommend and support:
 
@@ -29,7 +32,7 @@ We officially recommend and support:
 
 > **Recommendation**: To install in this environment, please see  [**Recommended Standard: Ubuntu 18.04**](#recommended-standard-ubuntu-1804) Installation Guide.
 
-## Officially Supported Environments
+## Official Supported Environments
 
 ### Server
 
@@ -325,7 +328,9 @@ If you intent to run our recommended standard, see [Install ownCloud on Ubuntu 1
 ##  How do I add another user?
 
 1\. Click on **&#8801;** the upper-left corner of the web interface and click on 'Users'
-2\. Towards the top-middle of the page, fill in the following:
+
+2\. At the top-middle of the page, fill in the following information:
+
 - Username
 - Email address
 - Select which group
@@ -334,6 +339,7 @@ If you intent to run our recommended standard, see [Install ownCloud on Ubuntu 1
 ## How do I install and connect with the Desktop Synchronization Client?
 
 1\. See our [Desktop Sync guide](https://doc.owncloud.com/desktop/installing.html) for Installation instructions.
+
 2\. When prompted, fill in the following information:
 
 - Server address: `https://<servername or ipaddress>/owncloud/`
@@ -345,7 +351,8 @@ If you intent to run our recommended standard, see [Install ownCloud on Ubuntu 1
 
 ## How do I install and connect with a Mobile app?
 
-1. Choose your installation guide:
-   - Android [guide](https://doc.owncloud.com/android/)
-   - iOS (iOS 11+) [guide](https://doc.owncloud.com/ios-app/)
-   - iOS (Legacy) [guide](https://doc.owncloud.com/ios/)
+Choose your guide and follow the installation and configuration directions:
+
+- Android [guide](https://doc.owncloud.com/android/)
+- iOS (iOS 11+) [guide](https://doc.owncloud.com/ios-app/)
+- iOS (Legacy) [guide](https://doc.owncloud.com/ios/)
