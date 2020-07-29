@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Quickstart for ownCloud"
+title: "Quick Start for ownCloud"
 ---
 
 1. 
@@ -8,17 +8,51 @@ title: "Quickstart for ownCloud"
 
 ## Introduction
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae luctus eros, vel scelerisque felis. Nunc ut sem quis dolor convallis convallis in sit amet ante. Cras at magna vitae ante eleifend tempor a ac augue. Quisque dapibus nibh sit amet felis ultricies porttitor. Donec laoreet dapibus eros quis mattis. Curabitur ut ipsum molestie, convallis diam maximus, porttitor tellus. Praesent ut euismod orci, eu pulvinar dui. Morbi vestibulum ante nisi, non condimentum est congue vitae. Ut at facilisis risus. Phasellus cursus risus sit amet lorem congue placerat. Nulla pellentesque et nibh eu pretium. Ut a porttitor felis. Cras commodo et libero nec laoreet. Aliquam orci diam, pretium sit amet purus eget, fringilla aliquet massa.
+This is a quick start installation guide for a Single Server / Single Database setup.
 
-## Before you get started
+Additional installation options are covered with the [ownCloud Administration Guide](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html).
 
-Nam quis dui euismod, eleifend mauris nec, bibendum augue. Curabitur sit amet risus ac metus sagittis consequat ac at diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra turpis est, eleifend fringilla massa dapibus quis. Fusce vel tincidunt ex, eget iaculis augue. Quisque fringilla eget sem in scelerisque. Curabitur aliquet finibus ipsum vitae auctor. Ut in ante erat. Nam sed pretium nisl, a auctor massa.
+For more deployment considerations and recommendations including scaling for mid-sized and large enterprise (greater than 150 users) and high availability options, see [Deployment Considerations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_considerations.html) and [Deployment Recommendations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html)
 
-## Download
+## System Requirements
 
-Praesent sed tincidunt arcu. Nunc facilisis semper est, eget interdum sapien vestibulum eu. Fusce faucibus justo sed convallis molestie. Duis a vestibulum felis, eget volutpat lectus. Pellentesque faucibus facilisis odio ac mollis. Maecenas eget tortor blandit, venenatis magna id, laoreet ex. Aliquam sed arcu cursus, elementum erat eget, ultricies turpis. Suspendisse non fermentum felis. In nibh nunc, tincidunt aliquet imperdiet vitae, viverra sit amet tortor. Donec blandit diam magna, nec sodales mauris volutpat nec. In sodales, lacus ut mollis sodales, lorem velit suscipit eros, eu posuere tellus elit at elit.
+### Officially Recommended Environment
 
-## Install
+We officially recommend and support:
+
+|**Platform**   |**Options**   |
+|---|---|
+|**Operating System**   |Ubuntu 18.04 LTS   |
+|**Database**   |MariaDB 10+   |
+|**Web server**   |Apache 2.4 with [prefork and mod_php](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#multi-processing-module-mpm)   |
+|**PHP Runtime**   |7.3   |
+
+### Officially Supported Environments
+
+|      |      |
+| ---- | ---- |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+
+
+
+## Installation
+
+### The Installation Wizard
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra turpis est, eleifend fringilla massa dapibus quis. Fusce vel tincidunt ex, eget iaculis augue. Quisque fringilla eget sem in scelerisque. 
+
+### Command Line Installation
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra turpis est, eleifend fringilla massa dapibus quis. Fusce vel tincidunt ex, eget iaculis augue. Quisque fringilla eget sem in scelerisque. 
+
+### Recommended Standard: Ubuntu 18.04
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra turpis est, eleifend fringilla massa dapibus quis. Fusce vel tincidunt ex, eget iaculis augue. Quisque fringilla eget sem in scelerisque. 
+
+## Verification
 
 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis risus metus, eleifend quis nisl et, vulputate vestibulum magna. Maecenas volutpat maximus elit nec rhoncus. Suspendisse sit amet dolor massa. Sed vitae sagittis dolor, non tempor enim. Phasellus in dictum sapien. Cras condimentum, lectus eu mattis ultricies, nibh lectus euismod libero, quis lacinia libero diam nec ex. Vivamus vestibulum sit amet felis eget luctus. Ut auctor fermentum dignissim. Cras ultrices turpis quis ullamcorper ullamcorper. Morbi a elit nec libero lacinia suscipit in a libero. Nunc dignissim efficitur mauris et consequat. Pellentesque fringilla nibh metus, id ultrices ipsum maximus vel.
 
