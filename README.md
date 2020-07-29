@@ -1,3 +1,3 @@
 # ownCloud
 
-Testing personal ownCloud server
+Writing a Quick Start installation guide for ownCloud Server.
