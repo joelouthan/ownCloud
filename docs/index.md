@@ -71,7 +71,7 @@ We officially recommend and support:
 
 ### Desktop Sync Client
 
-We always recommend to use the newest sync client with the latest server release. The latest stable client supports the platforms listed below:
+We recommend using the latest version of the Desktop Sync Client. The latest stable client supports the platforms listed below:
 
 - **Linux**
   - CentOS 7.6+ & 8
@@ -92,7 +92,7 @@ We always recommend to use the newest sync client with the latest server release
 
 ### Mobile Apps
 
-We always recommend to use the newest mobile apps with the latest server release. The latest stable mobile apps support the platforms listed below:
+We recommend using the latest version of the Mobile App. The latest stable mobile apps support the platforms listed below:
 
 - iOS 9.0+
 - Android 4.4+
@@ -101,7 +101,7 @@ We always recommend to use the newest mobile apps with the latest server release
 
 ## Database Requirements
 
-The following database settings are currently required if you’re running ownCloud together with a MySQL or MariaDB database:
+mySQL/MariaDB requirements:
 
 - `BINLOG` Disabled or `BINLOG_FORMAT = MIXED` or `BINLOG_FORMAT = ROW` configured Binary Logging (See: [MySQL / MariaDB with Binary Logging Enabled](https://doc.owncloud.org/server/10.4/admin_manual/configuration/database/linux_database_configuration.html#enabling-binary-logging))
 - InnoDB storage engine (**Note**: MyISAM storage engine is not supported, see: [MySQL / MariaDB storage engine](https://doc.owncloud.org/server/10.4/admin_manual/configuration/database/linux_database_configuration.html#configuring-the-storage-engine))
@@ -109,11 +109,11 @@ The following database settings are currently required if you’re running ownCl
 
 ## Memory Requirements
 
-Keep in mind that these are minimum memory requirements for a Single Server setup.
+For a single server setup:
 
-**Minimum requirement**  128GB
+**Minimum requirement**:  128GB
 
-**Recommended** 512GB
+**Recommended**: 512GB
 
 # Installation
 
@@ -125,7 +125,7 @@ Keep in mind that these are minimum memory requirements for a Single Server setu
 
 - The downloaded file will be named either owncloud-x.y.z.tar.bz2 or owncloud-x.y.z.zip (where x.y.z is the version number).
 
-- Download its corresponding checksum file, e.g., owncloud-x.y.z.tar.bz2.md5, or owncloud-x.y.z.tar.bz2.sha256.
+- Download the corresponding checksum file, e.g., owncloud-x.y.z.tar.bz2.md5, or owncloud-x.y.z.tar.bz2.sha256.
 
 - Verify the MD5 or SHA256 sum:
 
@@ -152,7 +152,7 @@ Keep in mind that these are minimum memory requirements for a Single Server setu
   unzip owncloud-x.y.z.zip
   ```
 
-- This unpacks to a single `owncloud` directory. Copy the ownCloud directory to its final destination. When you are running the Apache HTTP server, you may safely install ownCloud in your Apache document root:
+- This will unpack to a single `owncloud` directory. Copy the ownCloud directory to its final destination. When you are running the Apache HTTP server, you may safely install ownCloud in your Apache document root:
 
   ```
   cp -r owncloud /path/to/webserver/document-root
@@ -167,6 +167,8 @@ Keep in mind that these are minimum memory requirements for a Single Server setu
 On other HTTP servers, it is recommended to install ownCloud outside of the document root.
 
 ## Configuring Webserver
+
+There are two ways to configure Apache.
 
 ### Configure Apache
 
@@ -195,9 +197,9 @@ ln -s /etc/apache2/sites-available/owncloud.conf /etc/apache2/sites-enabled/ownc
 
 3\. Restart Apache
 
-### Configure Apache for port 8080 (for example)
+### Configure Apache to listen on a different port
 
-You can run ownCloud on its own port in Apache. For example, let us use port 8080.
+You can run ownCloud on its own port in Apache. For example: 8080.
 
 1\. In `/etc/apache2/ports.conf`, add the additional line right below `Listen 80`
 
@@ -207,11 +209,11 @@ You can run ownCloud on its own port in Apache. For example, let us use port 808
 
 `<VirtualHost *: 8080>`
 
-3\. Restart apache.
+3\. Restart Apache.
 
-## Right before you install
+## Before you install
 
-When Apache has been restarted, temporarily change the file and directory ownership to your HTTP user in order to proceed to either the Installation Wizard or the Command Line Installation:
+Change the `owncloud` directory ownership to your HTTP user:
 
 ```
 chown -R www-data:www-data /var/www/owncloud/
@@ -219,7 +221,7 @@ chown -R www-data:www-data /var/www/owncloud/
 
 > **Note**: For additional Prerequisites including Apache, PHP, or Database, please refer to: [Running the Installation Wizard](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#run-the-installation-wizard)
 
-From this point, you have three ways to complete the installation:
+Now, you have three ways to complete the installation:
 - [**The Installation Wizard**](#the-installation-wizard)
 - [**Command Line Installation**](#command-line-installation)
 - [**Recommended Standard: Ubuntu 18.04**](#recommended-standard-ubuntu-1804)
@@ -230,7 +232,7 @@ From this point, you have three ways to complete the installation:
 
 ### Introduction
 
-> **Recommendation** If you are planning to use the installation wizard, we strongly recommend that you protect it by enabling password authentication or network access control. 
+> **Recommendation**: If you are planning to use the installation wizard, we **recommend** that you protect it by enabling password authentication or through network access control. 
 
 ### Web Access
 
@@ -240,17 +242,17 @@ From this point, you have three ways to complete the installation:
 
 ### Data Directory
 
-At the top drop down menu, select Storage & Database to specify Data Folder and to Configure the Database. 
+At the top drop down menu, select 'Storage & Database' to specify data folder and to configure the database. 
 
 > **Note**: The directory must be already created and must be owned by the HTTP user.
 
-![image](../../../Sites/theologic.us/content/images/install-wizard-a1.png)
+![image](./install-wizard-a1.png)
 
-> **Important**: The data folder and content must be exclusive to ownCloud server. No other process nor user can alter the directory's contents.
+> **Important**: The data folder and content must be exclusive to ownCloud server. No other process or user can alter the directory's contents.
 
 ### mySQL/MariaDB Database
 
-MariaDB is the ownCloud recommended database. You can use it for either Server or Enterprise editions. To install the recommend MariaDB database server, use the following command (for Debian/Ubuntu servers):
+MariaDB is the ownCloud recommended database server. You can use it for either Server or Enterprise editions. To install the recommend MariaDB database server, use the following command (for Debian/Ubuntu servers):
 
 ```
 sudo apt-get install mariadb-server
@@ -278,11 +280,11 @@ For SQLite, PostgreSQL, and Oracle 11g database configuration, see [Database Cho
 
 ### Post-Installation
 
-After install, we recommend taking extra hardened security measures. See [Post-Installation Guide](https://doc.owncloud.org/server/10.4/admin_manual/installation/installation_wizard.html#post-installation-steps) for a step-by-step instructions.
+After install, we **recommend** taking extra hardened security measures. See [Post-Installation Guide](https://doc.owncloud.org/server/10.4/admin_manual/installation/installation_wizard.html#post-installation-steps) for step-by-step instructions.
 
 ## Command Line Installation
 
-One additional way of installing ownCloud is from the command line. This is can be used for scripted and automated operations. 
+For scripted and automated operations, use command line installation.
 
 Five steps for command line installation:
 
@@ -313,15 +315,15 @@ $ sudo -u www-data php occ maintenance:install \
 
 > **Note**: You must run `occ` as [your HTTP user](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#set-strong-directory-permissions).
 
-If you want to use a different data directory, just supply the `--data-dir` switch.
+If you want to use a different data directory, supply the `--data-dir` switch.
 
 When the command completes, [apply the correct permissions](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#set-strong-directory-permissions) to your ownCloud files and directories.
 
-> **Important**: This is important as it will protect your installation and your server runs in a supported state.
+> **Important**: Applying the correct permissions will protect your install.
 
 ## Recommended Standard: Ubuntu 18.04
 
-If you intent to run our recommended standard, see [Install ownCloud on Ubuntu 18.04](https://doc.owncloud.org/server/10.4/admin_manual/installation/ubuntu_18_04.html).
+If you intend to run our recommended standard, see [Install ownCloud on Ubuntu 18.04](https://doc.owncloud.org/server/10.4/admin_manual/installation/ubuntu_18_04.html).
 
 # Administration
 
@@ -338,7 +340,7 @@ If you intent to run our recommended standard, see [Install ownCloud on Ubuntu 1
 
 ## How do I install and connect with the Desktop Synchronization Client?
 
-1\. See our [Desktop Sync guide](https://doc.owncloud.com/desktop/installing.html) for Installation instructions.
+1\. See our [Desktop Sync guide](https://doc.owncloud.com/desktop/installing.html) for installation instructions.
 
 2\. When prompted, fill in the following information:
 
