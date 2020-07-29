@@ -1,22 +1,22 @@
 ---
 layout: default
-title: "Quick Start for ownCloud"
+title: "Quick Start for ownCloud Server"
 ---
 
-1. 
+- 
 {:toc}
 
-## Introduction
+# Introduction
 
-This is a quick start installation guide for a Single Server / Single Database setup.
+This is a quick start installation guide for a ownCloud Single Server / Single Database setup.
 
 Additional installation options are covered with the [ownCloud Administration Guide](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html).
 
-For more deployment considerations and recommendations including scaling for mid-sized and large enterprise (greater than 150 users) and high availability options, see [Deployment Considerations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_considerations.html) and [Deployment Recommendations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html)
+For mid-sized and enterprise scaling and high availability options, see [Deployment Considerations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_considerations.html) and [Deployment Recommendations](https://doc.owncloud.org/server/10.4/admin_manual/installation/deployment_recommendations.html).
 
-## System Requirements
+# System Requirements
 
-### Officially Recommended Environment
+## Officially Recommended Environment
 
 We officially recommend and support:
 
@@ -27,35 +27,325 @@ We officially recommend and support:
 |**Web server**   |Apache 2.4 with [prefork and mod_php](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#multi-processing-module-mpm)   |
 |**PHP Runtime**   |7.3   |
 
-### Officially Supported Environments
+> **Recommendation**: To install in this environment, please see  [**Recommended Standard: Ubuntu 18.04**](#recommended-standard-ubuntu-1804) Installation Guide.
 
-|      |      |
-| ---- | ---- |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
+## Officially Supported Environments
 
+### Server
 
+**Operating System (64bit)**
 
-## Installation
+- Debian 9 and 10
+- Fedora 30 and 31
+- Red Hat Enterprise Linux/Centos 7.5 and 8
+- SUSE Linux Enterprise Server 12 with SP4 and 15
+- Ubuntu 16.04 and 18.04
+- openSUSE Leap 42.3 and 15
 
-### The Installation Wizard
+**Database**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra turpis est, eleifend fringilla massa dapibus quis. Fusce vel tincidunt ex, eget iaculis augue. Quisque fringilla eget sem in scelerisque. 
+- MySQL 8+ or MariaDB 10+ (Recommended)
+- Oracle 11 and 12
+- PostgreSQL 9 and 10
+- SQLite (Not for production)
 
-### Command Line Installation
+**Web server**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra turpis est, eleifend fringilla massa dapibus quis. Fusce vel tincidunt ex, eget iaculis augue. Quisque fringilla eget sem in scelerisque. 
+- Apache 2.4 with [prefork and mod_php](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#multi-processing-module-mpm)
 
-### Recommended Standard: Ubuntu 18.04
+**PHP Runtime**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra turpis est, eleifend fringilla massa dapibus quis. Fusce vel tincidunt ex, eget iaculis augue. Quisque fringilla eget sem in scelerisque. 
+- 7.1, 7.2, and 7.3
 
-## Verification
+> **Note for Linux distributions**: We support two latest plus the current Long Term Support (LTS) versions.
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis risus metus, eleifend quis nisl et, vulputate vestibulum magna. Maecenas volutpat maximus elit nec rhoncus. Suspendisse sit amet dolor massa. Sed vitae sagittis dolor, non tempor enim. Phasellus in dictum sapien. Cras condimentum, lectus eu mattis ultricies, nibh lectus euismod libero, quis lacinia libero diam nec ex. Vivamus vestibulum sit amet felis eget luctus. Ut auctor fermentum dignissim. Cras ultrices turpis quis ullamcorper ullamcorper. Morbi a elit nec libero lacinia suscipit in a libero. Nunc dignissim efficitur mauris et consequat. Pellentesque fringilla nibh metus, id ultrices ipsum maximus vel.
+### Hypervisors
 
-## Verification
+- Hyper-V
+- VMware ESX
+- Xen
+- KVM
 
-Pellentesque ex neque, laoreet in dolor quis, placerat porta eros. In hac habitasse platea dictumst. Duis sodales est sit amet justo sodales, at euismod nisi dignissim. Nam ut pellentesque tellus. Maecenas tellus mauris, dictum sit amet vulputate nec, fermentum quis dolor. Nunc bibendum ipsum in eros aliquam, ac iaculis est hendrerit. Vestibulum nec iaculis arcu, eu viverra odio. Cras ac augue suscipit, egestas arcu nec, sodales est. Aliquam interdum lobortis nisl id molestie. Ut quis erat vel leo lacinia mattis sed cursus est. Morbi turpis nisl, volutpat vel erat quis, pharetra condimentum risus. Etiam rhoncus tortor urna, vel gravida nulla vehicula sit amet. Nam et euismod dui, vitae hendrerit risus. Curabitur ultrices id massa nec posuere. Nam nulla metus, scelerisque fringilla nunc ut, congue maximus libero.
+### Desktop Sync Client
+
+We always recommend to use the newest sync client with the latest server release. The latest stable client supports the platforms listed below:
+
+- **Linux**
+  - CentOS 7.6+ & 8
+  - Debian 9.0 & 10
+  - Fedora 30 & 31 & 32
+  - Ubuntu 18.04 & 19.04 & 19.10 & 20.04
+  - openSUSE Leap 15.0 & 15.1 & 15.2
+- **Apple** **macOS** X 10.10+ (**64-bit only**)
+- **Microsoft Windows** 7+
+
+### Web Browser
+
+- Edge (current version on Windows 10)
+- IE11 or newer (except Compatibility Mode)
+- Firefox 60 ESR+
+- Chrome 66+
+- Safari 10+
+
+### Mobile Apps
+
+We always recommend to use the newest mobile apps with the latest server release. The latest stable mobile apps support the platforms listed below:
+
+- iOS 9.0+
+- Android 4.4+
+
+> **Tip**: For more information on changes within version updates, please visit our [changlogs](https://owncloud.org/changelog/).
+
+## Database Requirements
+
+The following database settings are currently required if you’re running ownCloud together with a MySQL or MariaDB database:
+
+- `BINLOG` Disabled or `BINLOG_FORMAT = MIXED` or `BINLOG_FORMAT = ROW` configured Binary Logging (See: [MySQL / MariaDB with Binary Logging Enabled](https://doc.owncloud.org/server/10.4/admin_manual/configuration/database/linux_database_configuration.html#enabling-binary-logging))
+- InnoDB storage engine (**Note**: MyISAM storage engine is not supported, see: [MySQL / MariaDB storage engine](https://doc.owncloud.org/server/10.4/admin_manual/configuration/database/linux_database_configuration.html#configuring-the-storage-engine))
+- `READ COMMITED` transaction isolation level (See: [MySQL / MariaDB `READ COMMITED` transaction isolation level](https://doc.owncloud.org/server/10.4/admin_manual/configuration/database/linux_database_configuration.html#set-read-commited-as-the-transaction-isolation-level))
+
+## Memory Requirements
+
+Keep in mind that these are minimum memory requirements for a Single Server setup.
+
+**Minimum requirement**  128GB
+
+**Recommended** 512GB
+
+# Installation
+
+## Download and Extraction
+
+- Visit [ownCloud Download Page](https://owncloud.org/install).
+
+- Click on **Download ownCloud Server > Download > Archive file for server owners** and download either the tar.bz2 or .zip archive.
+
+- The downloaded file will be named either owncloud-x.y.z.tar.bz2 or owncloud-x.y.z.zip (where x.y.z is the version number).
+
+- Download its corresponding checksum file, e.g., owncloud-x.y.z.tar.bz2.md5, or owncloud-x.y.z.tar.bz2.sha256.
+
+- Verify the MD5 or SHA256 sum:
+
+  ```
+  md5sum -c owncloud-x.y.z.tar.bz2.md5 < owncloud-x.y.z.tar.bz2
+  sha256sum -c owncloud-x.y.z.tar.bz2.sha256 < owncloud-x.y.z.tar.bz2
+  md5sum  -c owncloud-x.y.z.zip.md5 < owncloud-x.y.z.zip
+  sha256sum  -c owncloud-x.y.z.zip.sha256 < owncloud-x.y.z.zip
+  ```
+
+- You may also verify the PGP signature:
+
+  ```
+  wget https://download.owncloud.org/community/owncloud-x.y.z.tar.bz2.asc
+  wget https://owncloud.org/owncloud.asc
+  gpg --import owncloud.asc
+  gpg --verify owncloud-x.y.z.tar.bz2.asc owncloud-x.y.z.tar.bz2
+  ```
+
+- Now you can extract the archive contents. Run the appropriate unpacking command for your archive type:
+
+  ```
+  tar -xjf owncloud-x.y.z.tar.bz2
+  unzip owncloud-x.y.z.zip
+  ```
+
+- This unpacks to a single `owncloud` directory. Copy the ownCloud directory to its final destination. When you are running the Apache HTTP server, you may safely install ownCloud in your Apache document root:
+
+  ```
+  cp -r owncloud /path/to/webserver/document-root
+  ```
+
+  where `/path/to/webserver/document-root` is replaced by the document root of your Web server:
+
+  ```
+  cp -r owncloud /var/www
+  ```
+
+On other HTTP servers, it is recommended to install ownCloud outside of the document root.
+
+## Configuring Webserver
+
+### Configure Apache
+
+1\. Create a `/etc/apache2/sites-available/owncloud.conf` file with the following lines:
+
+```apache
+Alias /owncloud "/var/www/owncloud/"
+
+<Directory /var/www/owncloud/>
+  Options +FollowSymlinks
+  AllowOverride All
+
+ <IfModule mod_dav.c>
+  Dav off
+ </IfModule>
+</Directory>
+```
+
+2\. Then create a symlink to /etc/apache2/sites-enabled:
+
+```
+ln -s /etc/apache2/sites-available/owncloud.conf /etc/apache2/sites-enabled/owncloud.conf
+```
+
+> **Note**: For additional Apache configurations including `mod_unique_id`, enabling SSL and Multi-Processing Module (MPM) considerations, please see [Additional Apache Configuration](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#additional-apache-configurations).
+
+3\. Restart Apache
+
+### Configure Apache for port 8080 (for example)
+
+You can run ownCloud on its own port in Apache. For example, let us use port 8080.
+
+1\. In `/etc/apache2/ports.conf`, add the additional line right below `Listen 80`
+
+`Listen 8080`
+
+2\. Edit the `/etc/apache2/sites-available/owncloud.conf` file by changing the top line to:
+
+`<VirtualHost *: 8080>`
+
+3\. Restart apache.
+
+## Right before you install
+
+When Apache has been restarted, temporarily change the file and directory ownership to your HTTP user in order to proceed to either the Installation Wizard or the Command Line Installation:
+
+```
+chown -R www-data:www-data /var/www/owncloud/
+```
+
+> **Note**: For additional Prerequisites including Apache, PHP, or Database, please refer to: [Running the Installation Wizard](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#run-the-installation-wizard)
+
+From this point, you have three ways to complete the installation:
+- [**The Installation Wizard**](#the-installation-wizard)
+- [**Command Line Installation**](#command-line-installation)
+- [**Recommended Standard: Ubuntu 18.04**](#recommended-standard-ubuntu-1804)
+
+> **Note:** To install with Docker, please see [**Installing with Docker**](https://doc.owncloud.org/server/10.4/admin_manual/installation/docker/).
+
+## The Installation Wizard
+
+### Introduction
+
+> **Recommendation** If you are planning to use the installation wizard, we strongly recommend that you protect it by enabling password authentication or network access control. 
+
+### Web Access
+
+1. In your web browser, go to `http://localhost/owncloud`
+2. Create an admin account with your desired username and password
+3. Click **[Finish setup]**
+
+### Data Directory
+
+At the top drop down menu, select Storage & Database to specify Data Folder and to Configure the Database. 
+
+> **Note**: The directory must be already created and must be owned by the HTTP user.
+
+![image](../../../Sites/theologic.us/content/images/install-wizard-a1.png)
+
+> **Important**: The data folder and content must be exclusive to ownCloud server. No other process nor user can alter the directory's contents.
+
+### mySQL/MariaDB Database
+
+MariaDB is the ownCloud recommended database. You can use it for either Server or Enterprise editions. To install the recommend MariaDB database server, use the following command (for Debian/Ubuntu servers):
+
+```
+sudo apt-get install mariadb-server
+```
+
+> **Note**: will need to use a user login with permissions to create and modify databases. 
+
+1. Choose "Storage & Database."
+2. Enter in DB user and password
+3. Enter in your own database name 
+
+You can setup a temporary database administrator account with the following steps:
+
+```
+sudo mysql --user=root mysql
+CREATE USER 'dbadmin'@'localhost' IDENTIFIED BY 'APASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO 'dbadmin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+exit
+```
+
+For more detailed information, see [MySQL/MariaDB Configuration](https://doc.owncloud.org/server/10.4/admin_manual/configuration/database/linux_database_configuration.html#mysql-mariadb).
+
+For SQLite, PostgreSQL, and Oracle 11g database configuration, see [Database Choices](https://doc.owncloud.org/server/10.4/admin_manual/installation/installation_wizard.html#database-choices).
+
+### Post-Installation
+
+After install, we recommend taking extra hardened security measures. See [Post-Installation Guide](https://doc.owncloud.org/server/10.4/admin_manual/installation/installation_wizard.html#post-installation-steps) for a step-by-step instructions.
+
+## Command Line Installation
+
+One additional way of installing ownCloud is from the command line. This is can be used for scripted and automated operations. 
+
+Five steps for command line installation:
+
+1. Ensure your server meets [the ownCloud prerequisites](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#prerequisites)
+2. Download and unpack the source
+3. Install using the `occ` command
+4. Set the correct owner and permissions
+5. Optional post-installation considerations
+
+Let's get started.
+
+1\. Download and unpack the source into an directory (e.g. `/var/www/owncloud`)
+2\. Change the owner for your unpacked `owncloud` directory with your HTTP user: 
+
+```
+$ sudo chown -R www-data:www-data /var/www/owncloud/
+```
+3\. Use `occ` command to perform the installation:
+
+```console
+# Assuming you’ve unpacked the source to /var/www/owncloud/
+$ cd /var/www/owncloud/
+$ sudo -u www-data php occ maintenance:install \
+   --database "mysql" --database-name "owncloud" \
+   --database-user "root" --database-pass "password" \
+   --admin-user "admin" --admin-pass "password"
+```
+
+> **Note**: You must run `occ` as [your HTTP user](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#set-strong-directory-permissions).
+
+If you want to use a different data directory, just supply the `--data-dir` switch.
+
+When the command completes, [apply the correct permissions](https://doc.owncloud.org/server/10.4/admin_manual/installation/manual_installation.html#set-strong-directory-permissions) to your ownCloud files and directories.
+
+> **Important**: This is important as it will protect your installation and your server runs in a supported state.
+
+## Recommended Standard: Ubuntu 18.04
+
+If you intent to run our recommended standard, see [Install ownCloud on Ubuntu 18.04](https://doc.owncloud.org/server/10.4/admin_manual/installation/ubuntu_18_04.html).
+
+# Administration
+
+##  How do I add another user?
+
+1\. Click on **&#8801;** the upper-left corner of the web interface and click on 'Users'
+2\. Towards the top-middle of the page, fill in the following:
+- Username
+- Email address
+- Select which group
+- Click on 'Create' button
+
+## How do I install and connect with the Desktop Synchronization Client?
+
+1\. See our [Desktop Sync guide](https://doc.owncloud.com/desktop/installing.html) for Installation instructions.
+2\. When prompted, fill in the following information:
+
+- Server address: `https://<servername or ipaddress>/owncloud/`
+- Username
+- Password
+- Select 'Sync everything from server' or 'Choose what to sync'
+- Select Local Folder (Default: `<Home Directory>/owncloud`)
+- Click 'Connect' button
+
+## How do I install and connect with a Mobile app?
+
+1. Choose your installation guide:
+   - Android [guide](https://doc.owncloud.com/android/)
+   - iOS (iOS 11+) [guide](https://doc.owncloud.com/ios-app/)
+   - iOS (Legacy) [guide](https://doc.owncloud.com/ios/)
