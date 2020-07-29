@@ -297,6 +297,7 @@ Five steps for command line installation:
 Let's get started.
 
 1\. Download and unpack the source into an directory (e.g. `/var/www/owncloud`)
+
 2\. Change the owner for your unpacked `owncloud` directory with your HTTP user: 
 
 ```
