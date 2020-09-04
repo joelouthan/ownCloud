@@ -123,7 +123,7 @@ For a single server setup:
 
 - Click on **Download ownCloud Server > Download > Archive file for server owners** and download either the tar.bz2 or .zip archive.
 
-- The downloaded file will be named either owncloud-x.y.z.tar.bz2 or owncloud-x.y.z.zip (where x.y.z is the version number).
+- Filename: owncloud-x.y.z.tar.bz2 or owncloud-x.y.z.zip (where x.y.z is the version number).
 
 - Download the corresponding checksum file, e.g., owncloud-x.y.z.tar.bz2.md5, or owncloud-x.y.z.tar.bz2.sha256.
 
@@ -136,7 +136,7 @@ For a single server setup:
   sha256sum  -c owncloud-x.y.z.zip.sha256 < owncloud-x.y.z.zip
   ```
 
-- You may also verify the PGP signature:
+- To verify the PGP signature:
 
   ```
   wget https://download.owncloud.org/community/owncloud-x.y.z.tar.bz2.asc
@@ -152,13 +152,13 @@ For a single server setup:
   unzip owncloud-x.y.z.zip
   ```
 
-- This will unpack to a single `owncloud` directory. Copy the ownCloud directory to its final destination. When you are running the Apache HTTP server, you may safely install ownCloud in your Apache document root:
+- This will unpack to a single `owncloud` directory. Copy the ownCloud directory to its final destination. When you are running the Apache HTTP server, install ownCloud in your Apache document root:
 
   ```
   cp -r owncloud /path/to/webserver/document-root
   ```
 
-  where `/path/to/webserver/document-root` is replaced by the document root of your Web server:
+  where `/path/to/webserver/document-root` is the document root of your Web server:
 
   ```
   cp -r owncloud /var/www
